@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const inputJumlah = prompt(`Masukkan jumlah ${item}:`);
 
     // Periksa apakah pengguna membatalkan input atau memasukkan nilai yang tidak valid
-    if (inputJumlah === null || isNaN(inputJumlah)) {
+    if (inputJumlah === null) {
       alert("Input tidak valid atau dibatalkan.");
     } else if (inputJumlah === "") {
       inputJumlah = "0";

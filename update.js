@@ -24,42 +24,42 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function updateModal() {
-    const updatedToko = document.getElementById("toko").value;
-    let jmlhModalbaru = "";
+  const updatedToko = document.getElementById("toko").value;
+  let jmlhModalbaru = "";
 
-    // Menggunakan switch untuk menentukan negara berdasarkan kota
-    switch (updatedToko) {
-        case "Prapatan":
-            jmlhModalbaru = "2.000.000";
-            break;
-        case "Gunung guntur":
-            jmlhModalbaru = "1.200.000";
-            break;
-        case "Gunung sari":
-            jmlhModalbaru = "2.200.000";
-            break;
-        case "Graha":
-            jmlhModalbaru = "1.500.000";
-            break;
-        case "Pasar baru":
-            jmlhModalbaru = "1.200.000";
-            break;
-        case "Mulawarman":
-            jmlhModalbaru = "1.500.000";
-            break;
-        case "PJHI/Batakan":
-            jmlhModalbaru = "1.300.000";
-            break;
-        case "Manggar":
-            jmlhModalbaru = "1.300.000";
-            break;
-        default:
-            jmlhModalbaru = "";
-            break;
-    }
+  // Menggunakan switch untuk menentukan negara berdasarkan kota
+  switch (updatedToko) {
+    case "Prapatan":
+      jmlhModalbaru = "2.000.000";
+      break;
+    case "Gunung guntur":
+      jmlhModalbaru = "1.200.000";
+      break;
+    case "Gunung sari":
+      jmlhModalbaru = "2.200.000";
+      break;
+    case "Graha":
+      jmlhModalbaru = "1.500.000";
+      break;
+    case "Pasar baru":
+      jmlhModalbaru = "1.200.000";
+      break;
+    case "Mulawarman":
+      jmlhModalbaru = "1.500.000";
+      break;
+    case "PJHI/Batakan":
+      jmlhModalbaru = "1.300.000";
+      break;
+    case "Manggar":
+      jmlhModalbaru = "1.300.000";
+      break;
+    default:
+      jmlhModalbaru = "";
+      break;
+  }
 
-    // Mengupdate nilai input negara
-    modal.value = jmlhModalbaru;
+  // Mengupdate nilai input negara
+  modal.value = jmlhModalbaru;
 }
 
 function saveChanges() {

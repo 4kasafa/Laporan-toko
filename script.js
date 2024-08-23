@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Fungsi untuk meng-handle event klik pada tombol Edit
   function editJumlah(item) {
-    const inputJumlah = prompt(`Masukkan jumlah ${item}:`);
+    let inputJumlah = prompt(`Masukkan jumlah ${item}:`);
 
     // Periksa apakah pengguna membatalkan input atau memasukkan nilai yang tidak valid
     if (inputJumlah === null) {

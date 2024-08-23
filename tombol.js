@@ -113,12 +113,14 @@ BERAS KETAN  = ${document.getElementById('ketan').innerText} KRG
 
 ---------------------------
 
-MINYAK KITA     = ${document.getElementById('kita').innerText} DUS
+KITA 1 LTR      = ${document.getElementById('kitaSatu').innerText} DUS
+KITA 2 LTR      = ${document.getElementById('kitaDua').innerText} DUS
 KUNCI MAS 2 LTR = ${document.getElementById('kunciMas').innerText} DUS
 FILMA 1 LTR     = ${document.getElementById('filmaSatu').innerText} DUS
 FILMA 2 LTR     = ${document.getElementById('filmaDua').innerText} DUS
 MASKU 1 LTR     = ${document.getElementById('maskuSatu').innerText} DUS
 MASKU 2 LTR     = ${document.getElementById('maskuDua').innerText} DUS
+TAWON 1 LTR     = ${document.getElementById('tawonSatu').innerText} DUS
 
 ---------------------------
 
@@ -136,15 +138,15 @@ SM BERAS JAGUNG 5 KG = ${document.getElementById('jagung').innerText} BKS
 
 ---------------------------
 
-LAMPION 25 KG = ${document.getElementById('lampion_25').innerText} KRG
-LAMPION 10 KG = ${document.getElementById('lampion_10').innerText} KRG
-LAMPION 5 KG  = ${document.getElementById('lampion_5').innerText} BKS
+BIG DADY 25 KG = ${document.getElementById('bigdady_25').innerText} KRG
+BIG DADY 10 KG = ${document.getElementById('bigdady_10').innerText} KRG
+BIG DADY 5 KG  = ${document.getElementById('bigdady_5').innerText} BKS
 
 ---------------------------
 
-MACAN TERBANG 25 KG = ${document.getElementById('macan_25').innerText} KRG
-MACAN TERBANG 10 KG = ${document.getElementById('macan_10').innerText} KRG
-MACAN TERBANG 5 KG  = ${document.getElementById('macan_5').innerText} BKS
+MADINAH 25 KG = ${document.getElementById('madinah_25').innerText} KRG
+MADINAH 10 KG = ${document.getElementById('madinah_10').innerText} KRG
+MADINAH 5 KG  = ${document.getElementById('madinah_5').innerText} BKS
 
 ---------------------------
 
@@ -154,9 +156,9 @@ MAWAR SAKURA 5 KG  = ${document.getElementById('mawar_5').innerText} BKS
 
 ---------------------------
 
-RAJAWLAI 25 KG = ${document.getElementById('rajawali_25').innerText} KRG
-RAJAWALI 10 KG = ${document.getElementById('rajawali_10').innerText} KRG
-RAJAWALI 5 KG  = ${document.getElementById('rajawali_5').innerText} BKS
+SUPER MAMA 25 KG = ${document.getElementById('supermama_25').innerText} KRG
+SUPER MAMA 10 KG = ${document.getElementById('supermama_10').innerText} KRG
+SUPER MAMA 5 KG  = ${document.getElementById('supermama_5').innerText} BKS
 
 ---------------------------
 

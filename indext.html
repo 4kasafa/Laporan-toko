@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Laporan Toko</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- data header -->
+    <h1>LAPORAN STOK BARANG TOKO LAY</h1>
+
+    <select name="toko" id="toko">
+      <option value="Prapatan">Prapatan</option>
+      <option value="Gunung guntur">Gunung guntur</option>
+      <option value="Gunung sari">Gunung sari</option>
+      <option value="Graha">Graha</option>
+      <option value="Pasar baru">Pasar baru</option>
+      <option value="Mulawarman">Mulawarman</option>
+      <option value="PJHI/Batakan">PJHI/Batakan</option>
+      <option value="Manggar">Manggar</option>
+    </select>
+
+    <input type="date" name="tanggal" id="tanggal">
+
+    <button onclick="saveChanges()" class="update_btn">UPDATE</button>
+    <script src="update.js"></script>
+
+    <hr>
+
+    <h3>Modal kasir :</h3>
+    <input type="text" id="modal" value="2.000.000">
+
+    <!-- table data barang -->
+    <table>
+      <tr>
+        <th>Barang</th>
+        <th>Jumlah</th>
+
+        <th>Edit</th>
+      </tr>
+      <!-- telur, gula, tepung, gula merah, kacang hijau, kacang tanah, ketan -->
+      <tr>
+        <td>Telur</td>
+        <td id="telur">0</td>
+        <td><span class="edit-btn" onclick="editJumlah('telur')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Gula</td>
+        <td id="gula">0</td>
+        <td><span class="edit-btn" onclick="editJumlah('gula')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Tepung</td>
+        <td id="tepung">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('tepung')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Gula merah</td>
+        <td id="gulmer">0</td>
+        <td><span class="edit-btn" onclick="editJumlah('gulmer')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Kacang hijau</td>
+        <td id="kacangHijau">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('kacangHijau')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Kacang tanah</td>
+        <td id="kacangTanah">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('kacangTanah')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Beras ketan</td>
+        <td id="ketan">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('ketan')">Edit</span></td>
+      </tr>
+      <!-- minyaaaaaaaaaaak -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Minyak kita 1 liter</td>
+        <td id="kitaSatu">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('kitaSatu')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Minyak kita 2 liter</td>
+        <td id="kitaDua">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('kitaDua')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Kunci mas 2 liter</td>
+        <td id="kunciMas">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('kunciMas')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Filma 1 liter</td>
+        <td id="filmaSatu">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('filmaSatu')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Filma 2 liter</td>
+        <td id="filmaDua">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('filmaDua')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Masku 1 liter</td>
+        <td id="maskuSatu">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('maskuSatu')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Masku 2 liter</td>
+        <td id="maskuDua">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('maskuDua')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Tawon 1 liter</td>
+        <td id="tawonSatu">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('tawonSatu')">Edit</span></td>
+      </tr>
+      <!-- beras buah lay-->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Buah lay 25 kg</td>
+        <td id="buahlay_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('buahlay_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Buah lay 5 kg</td>
+        <td id="buahlay_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('buahlay_5')">Edit</span></td>
+      </tr>
+      <!-- beras gunung manggar -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Gunung manggar 25 kg</td>
+        <td id="gunungManggar_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('gunungManggar_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Gunung manggar 5 kg</td>
+        <td id="gunungManggar_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('gunungManggar_5')">Edit</span></td>
+      </tr>
+      <!-- beras jagung-->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>SM Beras jagung 5 kg</td>
+        <td id="jagung">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('jagung')">Edit</span></td>
+      </tr>
+      <!-- beras bigdady -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Big dady 25 kg</td>
+        <td id="bigdady_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('bigdady_25')">Edit</span></td>
+      </tr>
+      <!tr>
+        <td>Big dady 10 kg</td>
+        <td id="bigdady_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('bigdady_10')">Edit</span></td>
+    </tr>
+      <tr>
+        <td>Big dady 5 kg</td>
+        <td id="bigdady_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('bigdady_5')">Edit</span></td>
+      </tr>
+      <!-- beras madinah -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Madinah 25 kg</td>
+        <td id="madinah_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('madinah_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Madinah 10 kg</td>
+        <td id="madinah_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('madinah_10')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Madinah 5 kg</td>
+        <td id="madinah_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('madinah_5')">Edit</span></td>
+      </tr>
+      <!-- beras mawar sakura -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Mawar sakura 25 kg</td>
+        <td id="mawar_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('mawar_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Mawar sakura 10 kg</td>
+        <td id="mawar_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('mawar_10')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Mawar sakura 5 kg</td>
+        <td id="mawar_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('mawar_5')">Edit</span></td>
+      </tr>
+      <!-- beras super mama -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Super mama 25 kg</td>
+        <td id="supermama_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('supermama_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Super mama 10 kg</td>
+        <td id="supermama_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('supermama_10')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Super mama 5 kg</td>
+        <td id="supermama_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('supermama_5')">Edit</span></td>
+      </tr>
+      <!-- beras sj -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Beras SJ 25 kg</td>
+        <td id="sj_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('sj_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Beras SJ 10 kg</td>
+        <td id="sj_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('sj_10')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Beras SJ 5 kg</td>
+        <td id="sj_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('sj_5')">Edit</span></td>
+      </tr>
+      <!-- beras sm biru -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>SM biru 25 kg</td>
+        <td id="smBiru_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smBiru_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>SM biru 10 kg</td>
+        <td id="smBiru_10">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smBiru_10')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>SM biru 5 kg</td>
+        <td id="smBiru_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smBiru_5')">Edit</span></td>
+      </tr>
+      <!-- beras sm hijau -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>SM hijau 25 kg</td>
+        <td id="smHijau_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smHijau_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>SM hijau 5 kg</td>
+        <td id="smHijau_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smHijau_5')">Edit</span></td>
+      </tr>
+      <!-- beras sm merah -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>SM merah 25 kg</td>
+        <td id="smMerah_25">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smMerah_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>SM merah 5 kg</td>
+        <td id="smMerah_5">0</td>
+
+        <td><span class="edit-btn" onclick="editJumlah('smMerah_5')">Edit</span></td>
+      </tr>
+      <!-- beras tombo luwe -->
+      <tr style="border-top: 2px solid #4caf50;"></tr>
+      <tr>
+        <td>Tombo luwe 25 kg</td>
+        <td id="tombo_25">0</td>
+        <td><span class="edit-btn" onclick="editJumlah('tombo_25')">Edit</span></td>
+      </tr>
+      <tr>
+        <td>Tombo luwe 5 kg</td>
+        <td id="tombo_5">0</td>
+        <td><span class="edit-btn" onclick="editJumlah('tombo_5')">Edit</span></td>
+      </tr>
+    </table>
+
+    <script src="script.js"></script>
+
+    <button onclick="salinLaporan()" id="copyBtn">Salin Laporan</button>
+    <button onclick="bagiLaporan()" id="shareBtn">Kirim Laporan</button>
+
+    <script src="tombol.js"></script>
+
+</div>
+
+  <footer>&copy; 2024 Made by Kasafa</footer>
+
+</body>
+
+</html>
